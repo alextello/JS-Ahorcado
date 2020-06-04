@@ -29,13 +29,12 @@ function desplegarPalabra() {
             .join('')}
   `;
 
-    const innerWord = palabraEl.innerText.repeat(/\n/g, '') // Reemplaza los saltos de linea
+    const innerWord = palabraEl.innerText.replace(/\n/g, '') // Reemplaza los saltos de linea
     if (innerWord === palabraSeleccionada) {
         mensajeFinal.innerText = 'Felicidades, ganaste!';
         popup.style.display = 'flex'
     }
 }
-
 // actualizar letras incorrectas
 function actualizarLetrasIncorrectasEl() {
     // Mostrar letras incorrectas
